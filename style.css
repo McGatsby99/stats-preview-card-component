@@ -1,0 +1,201 @@
+
+/* css reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root{
+
+    /* root units */
+    font-size: 5px;
+    
+    /******** Primary colours *******/
+    
+    /* main background */
+    --very-dark-blue: hsl(233, 47%, 7%);
+
+    /* card background */ 
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+
+    /* accent */
+    --soft-violet: hsla(277, 64%, 61%, 0.5);
+
+    /********* Neutral colours ********/
+    
+    /* main heading -- stats */
+    --white: hsl(0, 0%, 100%);
+
+    /*main paragragraph */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /* stat heading */
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    
+    /* Viewport calculation */
+    --middle-center: (100vw - 450px)/2;
+   
+}
+
+
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    line-height: 1.6;
+    background-color: var(--very-dark-blue);
+}
+
+.container{
+    background-color: var(--dark-desaturated-blue);
+    margin: 50px 20px;
+    padding: 0px 0px 20px 0px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    
+}
+
+.container .picture{
+    background-image: url("./images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 245px;
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.container .overlay{
+    min-height: 245px;
+    background-color: var(--soft-violet);
+    border-radius: 10px 10px 0 0;
+}
+
+.container .content{
+    margin: 30px;
+}
+
+
+.container .content h1{
+    line-height: 1.4;
+    margin: 30px 0px 20px;
+}
+
+.container .content p {
+    color: var(--slightly-transparent-white);
+    margin: 0 10px;
+}
+
+.container .content h1 span {
+    color: hsla(277, 64%, 61%);
+}
+
+img{
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 10px 10px 0px 0pc;
+    
+}
+
+.content ul {
+    list-style-type: none;
+    margin-top: 50px;
+    text-transform: uppercase;
+    color: var( --slightly-transparent-white)
+}
+
+.content ul li {
+    font-family: "Lexend Deca", sans-serif;
+    margin-bottom: 20px;
+}
+
+.content ul li span{
+    font-size: 5rem;
+    color: var(--white);
+    
+}
+
+.content ul li .lower{
+    text-transform: lowercase;
+}
+
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 758px){
+    
+    body{
+         height: 100vh; 
+         display: flex;
+         flex-direction: column;
+         align-items: center; 
+         justify-content: center;
+        }
+ 
+    .container{
+        margin: 0;
+        padding: 0;
+        height: 450px;
+        max-width: 1110px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    
+    .container .picture{
+        background-image: url("./images/image-header-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 450px;
+        min-width: 50%;
+        border-radius: 0 10px 10px 0;
+    
+    }
+    .container .overlay{
+        min-height: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .container .content{
+        text-align: left;
+        margin: 55px 115px 55px 55px;
+    }
+
+    .container .content h1{
+        line-height: 1.4;
+        margin: 0 0px 20px;
+    }
+    
+    .container .content p{
+        margin-right: 20px;
+        margin-left: 0;
+    }
+    
+    .content ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 10px 0 0;
+        
+    }
+
+    .content ul li {
+        font-family: "Lexend Deca", sans-serif;
+        margin-right: 30px;
+    }
+    
+     
+    
+}
